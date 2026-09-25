@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SpendWise personal finance dashboard shell">
+  <title>SpendWise | Monthly overview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="#overview" aria-label="SpendWise home">
+        <span class="brand-mark" aria-hidden="true">S</span>
+        <span>SpendWise</span>
+      </a>
+
+      <nav class="sidebar-nav">
+        <p class="nav-label">Workspace</p>
+        <a class="nav-link active" href="#overview" aria-current="page">
+          <span class="nav-icon" aria-hidden="true">◈</span>
+          Overview
+        </a>
+        <a class="nav-link" href="#categories">
+          <span class="nav-icon" aria-hidden="true">▦</span>
+          Categories
+        </a>
+        <a class="nav-link" href="#activity">
+          <span class="nav-icon" aria-hidden="true">↗</span>
+          Activity
+        </a>
+        <a class="nav-link" href="#goals">
+          <span class="nav-icon" aria-hidden="true">◎</span>
+          Goals
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="help-card">
+          <span class="help-icon" aria-hidden="true">?</span>
+          <div>
+            <strong>Need a hand?</strong>
+            <span>Open the spending guide</span>
+          </div>
+        </div>
+        <div class="user-profile">
+          <span class="avatar" aria-hidden="true">TG</span>
+          <span class="user-copy"><strong>Tsan Gai</strong><small>Personal account</small></span>
+          <span class="more-icon" aria-hidden="true">•••</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Friday, 24 May 2024</p>
+          <h1>Good morning, Tsan <span aria-hidden="true">✦</span></h1>
+          <p class="header-summary">Here is your financial pulse for this month.</p>
+        </div>
+        <div class="header-actions">
+          <button class="icon-button" type="button" aria-label="View notifications">♢<span class="notification-dot"></span></button>
+          <button class="profile-button" type="button"><span class="avatar small" aria-hidden="true">TG</span><span>My account</span><span aria-hidden="true">⌄</span></button>
+        </div>
+      </header>
+
+      <section class="overview-grid" aria-label="Monthly financial summary">
+        <article class="balance-panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow light">Available balance</p>
+              <h2>$4,268.40</h2>
+            </div>
+            <span class="balance-icon" aria-hidden="true">↗</span>
+          </div>
+          <div class="balance-meta">
+            <span class="positive">+12.8%</span>
+            <span>from last month</span>
+          </div>
+          <div class="balance-bars" aria-label="Balance has grown over the last four months">
+            <span style="height: 38%"></span><span style="height: 52%"></span><span style="height: 46%"></span><span style="height: 68%"></span><span style="height: 61%"></span><span style="height: 84%"></span><span style="height: 76%"></span><span class="current" style="height: 100%"></span>
+          </div>
+          <div class="chart-labels"><span>Mar</span><span>Apr</span><span>May</span></div>
+        </article>
+
+        <article class="metric-panel">
+          <div class="metric-topline"><span class="metric-icon coral" aria-hidden="true">↘</span><span class="metric-trend">-8.4%</span></div>
+          <p class="eyebrow">Total spent</p>
+          <h2>$2,184.72</h2>
+          <p class="metric-note">$315.28 less than your monthly average</p>
+        </article>
+
+        <article class="metric-panel savings-panel">
+          <div class="metric-topline"><span class="metric-icon mint" aria-hidden="true">◆</span><span class="metric-trend positive">On track</span></div>
+          <p class="eyebrow">Monthly savings</p>
+          <h2>$1,240.00</h2>
+          <div class="progress-track" aria-label="Savings goal is 72 percent complete"><span></span></div>
+          <p class="metric-note"><strong>72%</strong> of your $1,700 goal</p>
+        </article>
+      </section>
+
+      <section class="section-heading" id="categories">
+        <div>
+          <p class="eyebrow">Spending breakdown</p>
+          <h2>Where your money goes</h2>
+        </div>
+        <button class="text-button" type="button">View all <span aria-hidden="true">→</span></button>
+      </section>
+
+      <section class="category-grid" aria-label="Spending categories">
+        <a class="category-card food" href="#activity">
+          <div class="card-topline"><span class="category-icon" aria-hidden="true">✦</span><span class="menu-dots" aria-hidden="true">•••</span></div>
+          <div><h3>Food & dining</h3><p>12 transactions</p></div>
+          <div class="card-footer"><strong>$426.18</strong><span class="category-percent">19.5%</span></div>
+          <div class="mini-track"><span style="width: 68%"></span></div>
+        </a>
+        <a class="category-card transport" href="#activity">
+          <div class="card-topline"><span class="category-icon" aria-hidden="true">↗</span><span class="menu-dots" aria-hidden="true">•••</span></div>
+          <div><h3>Transport</h3><p>8 transactions</p></div>
+          <div class="card-footer"><strong>$188.50</strong><span class="category-percent">8.6%</span></div>
+          <div class="mini-track"><span style="width: 39%"></span></div>
+        </a>
+        <a class="category-card rent" href="#activity">
+          <div class="card-topline"><span class="category-icon" aria-hidden="true">⌂</span><span class="menu-dots" aria-hidden="true">•••</span></div>
+          <div><h3>Rent & home</h3><p>2 transactions</p></div>
+          <div class="card-footer"><strong>$980.00</strong><span class="category-percent">44.9%</span></div>
+          <div class="mini-track"><span style="width: 91%"></span></div>
+        </a>
+        <a class="category-card leisure" href="#activity">
+          <div class="card-topline"><span class="category-icon" aria-hidden="true">♫</span><span class="menu-dots" aria-hidden="true">•••</span></div>
+          <div><h3>Entertainment</h3><p>5 transactions</p></div>
+          <div class="card-footer"><strong>$214.99</strong><span class="category-percent">9.8%</span></div>
+          <div class="mini-track"><span style="width: 46%"></span></div>
+        </a>
+        <a class="category-card savings" href="#goals">
+          <div class="card-topline"><span class="category-icon" aria-hidden="true">◇</span><span class="menu-dots" aria-hidden="true">•••</span></div>
+          <div><h3>Savings</h3><p>Automatic transfer</p></div>
+          <div class="card-footer"><strong>$1,240.00</strong><span class="category-percent">56.7%</span></div>
+          <div class="mini-track"><span style="width: 76%"></span></div>
+        </a>
+        <a class="category-card utilities" href="#activity">
+          <div class="card-topline"><span class="category-icon" aria-hidden="true">⌁</span><span class="menu-dots" aria-hidden="true">•••</span></div>
+          <div><h3>Utilities</h3><p>4 transactions</p></div>
+          <div class="card-footer"><strong>$135.05</strong><span class="category-percent">6.2%</span></div>
+          <div class="mini-track"><span style="width: 29%"></span></div>
+        </a>
+      </section>
+
+      <section class="activity-section" id="activity">
+        <div class="section-heading compact">
+          <div><p class="eyebrow">Latest activity</p><h2>Recent transactions</h2></div>
+          <button class="text-button" type="button">See activity <span aria-hidden="true">→</span></button>
+        </div>
+        <div class="activity-list">
+          <div class="activity-row"><span class="activity-symbol food" aria-hidden="true">✦</span><span class="activity-name"><strong>Urban Fork</strong><small>Food & dining · Today</small></span><strong class="activity-amount">-$42.80</strong></div>
+          <div class="activity-row"><span class="activity-symbol transport" aria-hidden="true">↗</span><span class="activity-name"><strong>Metro transit</strong><small>Transport · Yesterday</small></span><strong class="activity-amount">-$18.50</strong></div>
+          <div class="activity-row"><span class="activity-symbol savings" aria-hidden="true">◇</span><span class="activity-name"><strong>Monthly savings</strong><small>Transfer · 22 May</small></span><strong class="activity-amount income">+$620.00</strong></div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
